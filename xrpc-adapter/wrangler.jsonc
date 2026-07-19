@@ -1,0 +1,21 @@
+// wrangler.jsonc — CF Worker config for ndc XRPC adapter
+{
+  "name": "ndc-xrpc-adapter",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-10-01",
+  "env": {
+    "production": {
+      "routes": [
+        {
+          "pattern": "ndc.etzhayyim.com/*",
+          "zone_name": "etzhayyim.com"
+        }
+      ],
+      "vars": {
+        "ACTOR_DID": "did:web:ndc.etzhayyim.com",
+        "PDS_URL": "https://pds.etzhayyim.com",
+        "L2_RPC_URL": "https://base-sepolia.blockpi.network/v1/rpc/public"
+      }
+    }
+  }
+}
