@@ -40,7 +40,7 @@ npm error Unsupported URL Type "workspace:": workspace:*
 
 `@etzhayyim/ndc-kotoba` is declared `workspace:*`, but the repository has **no
 workspace root** — no root `package.json`, no `pnpm-workspace.yaml`; the only
-tracked top-level files are `CLAUDE.md`, `README.edn` and `migration.edn`. So
+tracked top-level files are `AGENTS.md`, `README.edn` and `migration.edn`. So
 the dependency has nothing to resolve against. Fixing this (adding a workspace
 root, or pointing at `../kotoba` with `file:`) is a prerequisite for any deploy,
 and has not been done.
