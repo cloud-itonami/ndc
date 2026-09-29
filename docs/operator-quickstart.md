@@ -217,7 +217,7 @@ Cloudflare Worker だが、この quickstart を書いた時点で:
 
   `@etzhayyim/ndc-kotoba` を `workspace:*` で参照しているのに、**この repo に
   workspace root が無い**（root `package.json` も `pnpm-workspace.yaml` も無く、
-  git 管理下のトップレベルは `CLAUDE.md` / `README.edn` / `migration.edn` の 3 つだけ）。
+  git 管理下のトップレベルは `AGENTS.md` / `README.edn` / `migration.edn` の 3 つだけ）。
   解決先が存在しない。workspace root を作るか `file:../kotoba` に変えるかが
   deploy の前提条件で、**まだ誰もやっていない。**
 - したがって `wrangler dev` / `wrangler deploy` は踏んでいない。実行には
@@ -238,9 +238,9 @@ GET  /xrpc/com.etzhayyim.apps.ndc.listDrugs?dosageForm=TABLET,%20CHEWABLE
 （`com.etzhayyim.apps.ndc.*`）は今も食い違っている。** これはコード自身の状態で、
 どちらが正かは決まっていない。
 
-## 6. `CLAUDE.md` を仕様として読まないこと
+## 6. `AGENTS.md` を仕様として読まないこと
 
-`CLAUDE.md` には 8 コマンド・6 collection・WIT capability export・60s heartbeat が
+`AGENTS.md` には 8 コマンド・6 collection・WIT capability export・60s heartbeat が
 書いてあるが、**`interaction` / `adverse` / `coverage` / `heartbeat` / `WIT` は
 `kotoba/src` と `xrpc-adapter/src` に 1 件もヒットしない**（case-sensitive で実測）。
 あれは移行前の seed（`migration.edn` の revision `c3a74d2`）の設計文書であり、
